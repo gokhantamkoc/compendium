@@ -22,4 +22,4 @@ Compendium.iml
 .idea/
 
 # Project Files
-/src/main/resources/application.properties
+src/main/resources/application.properties
