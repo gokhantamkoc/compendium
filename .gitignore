@@ -20,3 +20,6 @@ $RECYCLE.BIN/
 # Idea Project Configuration
 Compendium.iml
 .idea/
+
+# Project Files
+src/main/resources/application.properties
