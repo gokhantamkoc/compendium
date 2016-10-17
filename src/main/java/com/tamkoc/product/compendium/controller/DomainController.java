@@ -95,7 +95,7 @@ public class DomainController {
 
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("redirect:/domain/list");
-        String message = "Domain was successfully updated.";
+        String message = "\"" + domain.getName() + "\" named domain was successfully updated.";
         redirectAttributes.addFlashAttribute("successMessage", message);
 
         return modelAndView;

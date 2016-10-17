@@ -1,6 +1,7 @@
 package com.tamkoc.product.compendium.model;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import java.sql.Timestamp;
 
 /**
@@ -14,24 +15,23 @@ public class Course {
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     private long id;
 
-    @ManyToOne
+    @NotNull
+    @OneToOne
     @JoinColumn(name = "status_id")
     private CourseStatus courseStatus;
 
+    @NotNull
     @ManyToOne
-    @JoinColumn(name = "domain_id")
-    private Domain domain;
+    @JoinColumn(name = "path_id")
+    private Path path;
 
     private String name;
-
-    private String description;
 
     private Timestamp creationDate;
 
     private Timestamp lastUpdateDate;
 
-    public Course() {
-    }
+    public Course() { }
 
     public long getId() {
         return id;
@@ -45,12 +45,12 @@ public class Course {
         return courseStatus;
     }
 
-    public Domain getDomain() {
-        return domain;
+    public Path getPath() {
+        return path;
     }
 
-    public void setDomain(Domain domain) {
-        this.domain = domain;
+    public void setPath(Path path) {
+        this.path = path;
     }
 
     public void setCourseStatus(CourseStatus domainStatus) {
@@ -63,14 +63,6 @@ public class Course {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
     }
 
     public Timestamp getCreationDate() {

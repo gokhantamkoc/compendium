@@ -6,6 +6,7 @@ import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.sql.Timestamp;
+import java.util.List;
 
 /**
  * @author Gokhan Tamkoc on 14.10.2016.
@@ -20,7 +21,7 @@ public class Path {
 
     @NotNull
     @OneToOne
-    @JoinColumn(name = "path_status_id")
+    @JoinColumn(name = "status_id")
     private PathStatus pathStatus;
 
     @NotNull
@@ -37,6 +38,9 @@ public class Path {
     @NotEmpty(message = "Can not be empty!")
     @Size(max = 500, message = "Can have 500 max characters!")
     private String description;
+
+    @OneToMany(mappedBy="course", cascade=CascadeType.ALL)
+    private transient List<Course> courseList;
 
     private Timestamp creationDate;
 
@@ -96,6 +100,14 @@ public class Path {
 
     public void setLastUpdateDate(Timestamp lastUpdateDate) {
         this.lastUpdateDate = lastUpdateDate;
+    }
+
+    public void setCourseList(List<Course> courseList) {
+        this.courseList = courseList;
+    }
+
+    public List<Course> getCourseList() {
+        return this.courseList;
     }
 
     @PrePersist

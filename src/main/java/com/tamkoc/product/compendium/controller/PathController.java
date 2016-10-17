@@ -106,7 +106,7 @@ public class PathController {
 
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("redirect:/path/list");
-        String message = "Path was successfully updated.";
+        String message = "\"" + path.getName() + "\" named path was successfully updated.";
         redirectAttributes.addFlashAttribute("successMessage", message);
 
         return modelAndView;

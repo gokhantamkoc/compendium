@@ -22,7 +22,7 @@
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="${pageContext.request.contextPath}/domain/list">Domains</a></li>
                         <li><a href="${pageContext.request.contextPath}/path/list">Paths</a></li>
-                        <li><a href="#">Courses</a></li>
+                        <li><a href="${pageContext.request.contextPath}/course/list">Courses</a></li>
                         <li><a href="#">Tests</a></li>
                         <li><a href="#">About</a></li>
                     </ul>

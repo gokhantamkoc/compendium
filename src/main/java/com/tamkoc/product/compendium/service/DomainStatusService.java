@@ -26,11 +26,6 @@ public class DomainStatusService implements IDomainStatusService {
     }
 
     @Override
-    public DomainStatus delete(short id) throws DomainStatusNotFoundException {
-        return null;
-    }
-
-    @Override
     public List<DomainStatus> findAll() {
         return domainStatusRepository.findAll();
     }

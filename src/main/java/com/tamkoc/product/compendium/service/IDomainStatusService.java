@@ -10,7 +10,6 @@ import java.util.List;
  */
 public interface IDomainStatusService {
     public DomainStatus create(DomainStatus domainStatus);
-    public DomainStatus delete(short id) throws DomainStatusNotFoundException;
     public List<DomainStatus> findAll();
     public DomainStatus update(DomainStatus domainStatus) throws DomainStatusNotFoundException;
     public DomainStatus findById(short id);

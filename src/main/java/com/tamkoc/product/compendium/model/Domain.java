@@ -21,7 +21,7 @@ public class Domain {
 
     @NotNull
     @OneToOne
-    @JoinColumn(name = "domain_status_id")
+    @JoinColumn(name = "status_id")
     private DomainStatus domainStatus;
 
     @Column(length = 500)
