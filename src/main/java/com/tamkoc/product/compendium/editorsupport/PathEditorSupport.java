@@ -8,7 +8,7 @@ import java.beans.PropertyEditorSupport;
 /**
  * @author Gokhan Tamkoc on 17.10.2016.
  */
-public class PathEditorSupport extends PropertyEditorSupport{
+public class PathEditorSupport extends PropertyEditorSupport {
     IPathService pathService;
 
     public PathEditorSupport(IPathService pathService) {

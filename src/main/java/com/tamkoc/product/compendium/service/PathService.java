@@ -34,7 +34,7 @@ public class PathService implements IPathService {
     }
 
     @Override
-    @Transactional
+    @Transactional(rollbackFor = PathNotFoundException.class)
     public Path update(Path path) throws PathNotFoundException {
         Path updatedPath = pathRepository.findOne(path.getId());
         if(updatedPath == null) {
@@ -46,7 +46,7 @@ public class PathService implements IPathService {
         updatedPath.setName(path.getName());
         updatedPath.setDescription(path.getDescription());
 
-        return null;
+        return updatedPath;
     }
 
     @Override

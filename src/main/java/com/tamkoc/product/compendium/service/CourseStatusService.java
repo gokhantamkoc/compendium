@@ -1,6 +1,6 @@
 package com.tamkoc.product.compendium.service;
 
-import com.tamkoc.product.compendium.editorsupport.CourseStatusNotFoundException;
+import com.tamkoc.product.compendium.exception.CourseStatusNotFoundException;
 import com.tamkoc.product.compendium.model.CourseStatus;
 import com.tamkoc.product.compendium.repository.CourseStatusRepository;
 import org.springframework.stereotype.Service;
@@ -29,7 +29,7 @@ public class CourseStatusService implements ICourseStatusService {
     }
 
     @Override
-    @Transactional(rollbackFor=CourseStatusNotFoundException.class)
+    @Transactional(rollbackFor = CourseStatusNotFoundException.class)
     public CourseStatus update(CourseStatus courseStatus) throws CourseStatusNotFoundException {
         CourseStatus updatedCourseStatus = courseStatusRepository.findOne(courseStatus.getId());
 
@@ -43,6 +43,7 @@ public class CourseStatusService implements ICourseStatusService {
     }
 
     @Override
+    @Transactional
     public CourseStatus findById(short id) {
         return courseStatusRepository.findOne(id);
     }

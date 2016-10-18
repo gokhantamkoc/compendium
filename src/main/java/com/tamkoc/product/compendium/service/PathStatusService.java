@@ -45,7 +45,7 @@ public class PathStatusService implements IPathStatusService{
     }
 
     @Override
-    @Transactional(rollbackFor=PathStatusNotFoundException.class)
+    @Transactional(rollbackFor = PathStatusNotFoundException.class)
     public PathStatus update(PathStatus pathStatus) throws PathStatusNotFoundException {
         PathStatus updatedPathStatus = pathStatusRepository.findOne(pathStatus.getId());
 
@@ -59,6 +59,7 @@ public class PathStatusService implements IPathStatusService{
     }
 
     @Override
+    @Transactional
     public PathStatus findById(short id) {
         return pathStatusRepository.findOne(id);
     }

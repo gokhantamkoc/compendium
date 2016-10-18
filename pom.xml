@@ -26,6 +26,7 @@
         <servlet.version>3.1.0</servlet.version>
         <jstl.version>1.2</jstl.version>
         <postgresql.jdbc.driver.version>9.4-1204-jdbc42</postgresql.jdbc.driver.version>
+        <hikaricp.version>2.5.1</hikaricp.version>
     </properties>
 
     <dependencies>
@@ -61,7 +62,7 @@
         <dependency>
             <groupId>com.zaxxer</groupId>
             <artifactId>HikariCP</artifactId>
-            <version>2.5.1</version>
+            <version>${hikaricp.version}</version>
         </dependency>
 
         <!-- CGLIB is required to process @Configuration classes -->

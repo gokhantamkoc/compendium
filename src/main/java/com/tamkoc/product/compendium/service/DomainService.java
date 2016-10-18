@@ -33,7 +33,7 @@ public class DomainService implements IDomainService {
     }
 
     @Override
-    @Transactional(rollbackFor=DomainNotFoundException.class)
+    @Transactional(rollbackFor = DomainNotFoundException.class)
     public Domain update(Domain domain) throws DomainNotFoundException {
         Domain updatedDomain = domainRepository.findOne(domain.getId());
 
@@ -49,6 +49,7 @@ public class DomainService implements IDomainService {
     }
 
     @Override
+    @Transactional
     public Domain findById(long id) {
         return domainRepository.findOne(id);
     }

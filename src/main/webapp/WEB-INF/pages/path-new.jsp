@@ -53,11 +53,11 @@
           <br/>
 
           <div class="row">
-              <div class="col-sm-2"><span class="title"><b>Status</b></span></div>
+              <div class="col-sm-2"><span class="title"><b>Domain</b></span></div>
               <div class="col-sm-5">
                   <form:select path="domain"  cssClass="form-control">
-                      <c:forEach var="domain" items="${domainList}">
-                          <form:option value="${domain.id.toString()}"><c:out value="${domain.name}"/></form:option>
+                      <c:forEach var="item" items="${domainList}">
+                          <form:option value="${item.id.toString()}"><c:out value="${item.name}"/></form:option>
                       </c:forEach>
                   </form:select>
               </div>

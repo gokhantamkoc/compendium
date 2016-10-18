@@ -31,7 +31,7 @@ public class CourseService implements ICourseService{
     }
 
     @Override
-    @Transactional(rollbackFor= CourseNotFoundException.class)
+    @Transactional(rollbackFor = CourseNotFoundException.class)
     public Course update(Course course) throws CourseNotFoundException {
         Course updatedCourse = courseRepository.findOne(course.getId());
 
@@ -47,6 +47,7 @@ public class CourseService implements ICourseService{
     }
 
     @Override
+    @Transactional
     public Course findById(long id) {
         return courseRepository.findOne(id);
     }

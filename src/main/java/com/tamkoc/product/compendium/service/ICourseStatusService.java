@@ -1,6 +1,6 @@
 package com.tamkoc.product.compendium.service;
 
-import com.tamkoc.product.compendium.editorsupport.CourseStatusNotFoundException;
+import com.tamkoc.product.compendium.exception.CourseStatusNotFoundException;
 import com.tamkoc.product.compendium.model.CourseStatus;
 
 import java.util.List;

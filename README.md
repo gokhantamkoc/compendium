@@ -6,6 +6,7 @@ A Spring Framework Web MVC Application
 - Domain Management
 - Path Management
 - Course Management
+- Session Management
 - Question Management(Not available)
 - Test Management(Not available)
 
