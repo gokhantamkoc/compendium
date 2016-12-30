@@ -18,7 +18,7 @@ $RECYCLE.BIN/
 *.lnk
 
 # Idea Project Configuration
-Compendium.iml
+*.iml
 .idea/
 
 # Project Files

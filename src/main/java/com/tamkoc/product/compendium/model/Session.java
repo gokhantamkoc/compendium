@@ -36,7 +36,6 @@ public class Session {
     @Column(length = 1000)
     private String introduction;
 
-    @NotEmpty
     @Column(length = 4000)
     private String body;
 

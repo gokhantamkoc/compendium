@@ -26,7 +26,8 @@
                 <th width="50px"># of Order</th>
                 <th width="150px">Name</th>
                 <th width="25px">Status</th>
-                <th width="50px">*</th>
+                <th width="50px">-</th>
+                <th width="50px">-</th>
             </tr>
             </thead>
             <tbody>
@@ -38,7 +39,11 @@
                     <td>${session.name}</td>
                     <td>${session.sessionStatus.description}</td>
                     <td>
-                        <a href="${pageContext.request.contextPath}/session/edit/${session.id}">Edit</a><br/>
+                        <a href="${pageContext.request.contextPath}/session/edit/${session.id}">Edit</a>
+                    </td>
+                    <td>
+
+                        <a href="${pageContext.request.contextPath}/question/list/${session.id}">Questions</a>
                     </td>
                 </tr>
             </c:forEach>
